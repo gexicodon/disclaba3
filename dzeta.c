@@ -16,7 +16,7 @@ int is_prime(int n) {
 }
 
 
-static double dzeta_Riemann(double s, double eps) {
+double dzeta_Riemann(double s, double eps) {
     double result = 0, tmp = 0;
     int n = 1;
     do {
@@ -30,7 +30,7 @@ static double dzeta_Riemann(double s, double eps) {
 
 
 
-static double dzeta_Riemann_by_Euler_mul(double s, double eps) {
+double dzeta_Riemann_by_Euler_mul(double s, double eps) {
     double result = 1, tmp = 0;
     int n = 2;
     do {
