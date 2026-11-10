@@ -16,6 +16,8 @@ int is_prime(int n) {
 }
 
 
+
+
 double dzeta_Riemann(double s, double eps) {
     double result = 0, tmp = 0;
     int n = 1;
@@ -55,12 +57,17 @@ int main() {
 
     scanf("%lf", &s);
 
+    if (s <= 1) {
+        printf("Dzeta-function is defined in Re(s) > 1\n");
+        return 1;
+    }
+
     double opr = dzeta_Riemann(s, eps);
     double eul = dzeta_Riemann_by_Euler_mul(s, eps);
 
 
-    printf("By definition: %f\n", opr);
-    printf("By Euler multiplication: %f\n", eul);
+    printf("By definition: %.32f\n", opr);
+    printf("By Euler multiplication: %.32f\n", eul);
     return 0;
 }
 
